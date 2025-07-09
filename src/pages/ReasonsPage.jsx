@@ -4,7 +4,7 @@ import MessageCard from '../components/MessageCard';
 const ReasonsPage = () => {
   return (
     <>
-      <Header title="Reasons I Love You ❤️" />
+      <Header title="Reasons ❤️" />
       
       <MessageCard>
        <ul className="reasons-list">

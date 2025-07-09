@@ -37,6 +37,7 @@ const HomePage = ({ showHiddenMessage, setShowHiddenMessage }) => {
       />
       
       <MessageCard>
+        <p className="message"><b>Pookie 💛🪽</b></p>
         <p className="message">பொட்டு வைத்தால் மெய் எழுத்தை விட அழகாக இருப்பாள்....⚡</p>
         
         <p className="message">She has beautiful <span className="highlight">weapon</span> 😳</p>

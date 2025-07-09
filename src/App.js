@@ -12,10 +12,10 @@ function App() {
     <Router>
       <div className="app">
         <nav className="navigation">
-          <Link to="/" className="nav-link">Home</Link>
-          <Link to="/reasons" className="nav-link">Reasons</Link>
-          <Link to="/memories" className="nav-link">Memories</Link>
-          <Link to="/special" className="nav-link">Special</Link>
+          <Link to="/" className="nav-link">😀</Link>
+          <Link to="/reasons" className="nav-link">🤓</Link>
+          <Link to="/memories" className="nav-link">🙄</Link>
+          <Link to="/special" className="nav-link">😖</Link>
         </nav>
         
         <Routes>
