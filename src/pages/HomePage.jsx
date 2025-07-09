@@ -70,7 +70,7 @@ const HomePage = ({ showHiddenMessage, setShowHiddenMessage }) => {
         
         <div className="tamil">
           ✨
-          காற்றாக வந்து காற்றாகவே போனது💔🌹🥺
+          காற்றாக வந்தவள் 🍃 காற்றாகவே போனாள் 💨💔🥺
         </div>
         
         <p className="last-line">Last... incomplete, but beautiful 🥀</p>
