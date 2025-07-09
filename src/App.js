@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import MemoriesPage from './pages/MemoriesPage';
+import ReasonsPage from './pages/ReasonsPage';
+import SpecialPage from './pages/SpecialPage';
 
 function App() {
+  const [showHiddenMessage, setShowHiddenMessage] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <nav className="navigation">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/reasons" className="nav-link">Reasons</Link>
+          <Link to="/memories" className="nav-link">Memories</Link>
+          <Link to="/special" className="nav-link">Special</Link>
+        </nav>
+        
+        <Routes>
+          <Route path="/" element={<HomePage showHiddenMessage={showHiddenMessage} setShowHiddenMessage={setShowHiddenMessage} />} />
+          <Route path="/reasons" element={<ReasonsPage />} />
+          <Route path="/memories" element={<MemoriesPage />} />
+          <Route path="/special" element={<SpecialPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
