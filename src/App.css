@@ -528,3 +528,68 @@ h1::after {
     font-size: 1.6rem;
   }
 }
+
+/* Audio Button Styles */
+.audio-btn {
+  background: rgba(255, 107, 139, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 10px rgba(255, 107, 139, 0.2);
+  color: var(--primary-dark);
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.audio-btn:hover {
+  background: rgba(255, 107, 139, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(255, 107, 139, 0.3);
+  color: var(--primary-dark);
+}
+
+.audio-btn:active {
+  transform: scale(0.95);
+}
+
+.audio-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--primary), var(--gold));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.audio-btn:hover::before {
+  opacity: 0.3;
+}
+
+/* Animation for when audio is playing */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 107, 139, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 107, 139, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 107, 139, 0.3);
+  }
+}
+
+.audio-btn.playing {
+  animation: pulse-glow 2s infinite;
+  color: var(--gold);
+}
