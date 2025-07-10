@@ -54,19 +54,19 @@ const HomePage = ({ showHiddenMessage, setShowHiddenMessage }) => {
 
       <MessageCard>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
+ 
+  <button 
+    onClick={toggleAudio}
+    className={`audio-btn ${isPlaying ? 'playing' : ''}`}
+    aria-label={isPlaying ? 'Pause song' : 'Play song'}
+  >
+    {isPlaying ? '⏸' : '▶'}
+  </button>
+   <p className="message"><b>Pookie 💛🪽</b></p>
+</div>
 
-          <button
-            onClick={toggleAudio}
-            className={`audio-btn ${isPlaying ? 'playing' : ''}`}
-            aria-label={isPlaying ? 'Pause song' : 'Play song'}
-          >
-            {isPlaying ? '⏸' : '▶'}
-          </button>
-          <p className="message"><b>Pookie 💛🪽</b></p>
-        </div>
-
-
-
+        
+        
         <p className="message">பொட்டு வைத்தால் மெய் எழுத்தை விட அழகாக இருப்பாள்....⚡</p>
 
         <p className="message">She has beautiful <span className="highlight">weapon</span> 😳</p>
